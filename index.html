@@ -12,6 +12,24 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
+        /* Global fixes to prevent horizontal overflow and ensure predictable sizing */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        html, body {
+            overflow-x: hidden; /* remove any horizontal scrolling caused by wide elements */
+        }
+        /* Ensure media never exceed their container which can cause overflow */
+        img, video, svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* Make sure fixed nav always spans viewport without adding extra width */
+        nav {
+            left: 0;
+            right: 0;
+        }
         body {
             font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
