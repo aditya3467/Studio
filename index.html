@@ -416,19 +416,44 @@
         // Mobile menu toggle
         const mobileMenuButton = document.querySelector('nav button');
         const mobileMenu = document.querySelector('.hidden.md\\:flex');
-        
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            mobileMenu.classList.toggle('flex');
-            mobileMenu.classList.toggle('absolute');
-            mobileMenu.classList.toggle('top-full');
-            mobileMenu.classList.toggle('left-0');
-            mobileMenu.classList.toggle('w-full');
-            mobileMenu.classList.toggle('bg-white');
-            mobileMenu.classList.toggle('shadow-lg');
-            mobileMenu.classList.toggle('flex-col');
-            mobileMenu.classList.toggle('space-y-4');
-            mobileMenu.classList.toggle('p-6');
+
+        function closeMobileMenu() {
+            if (!mobileMenu) return;
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex', 'absolute', 'top-full', 'left-0', 'w-full', 'bg-white', 'shadow-lg', 'flex-col', 'space-y-4', 'p-6');
+        }
+
+        function openMobileMenu() {
+            if (!mobileMenu) return;
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.classList.add('flex', 'absolute', 'top-full', 'left-0', 'w-full', 'bg-white', 'shadow-lg', 'flex-col', 'space-y-4', 'p-6');
+        }
+
+        function isMobileMenuOpen() {
+            return mobileMenu && !mobileMenu.classList.contains('hidden');
+        }
+
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', (e) => {
+                // prevent the document click handler from immediately closing it
+                e.stopPropagation();
+                if (isMobileMenuOpen()) closeMobileMenu(); else openMobileMenu();
+            });
+        }
+
+        // Close when clicking a link or button inside the mobile menu
+        if (mobileMenu) {
+            mobileMenu.addEventListener('click', (e) => {
+                const clickedNavItem = e.target.closest('a, button');
+                if (clickedNavItem) closeMobileMenu();
+            });
+        }
+
+        // Close when clicking outside the menu
+        document.addEventListener('click', (e) => {
+            if (!isMobileMenuOpen()) return;
+            if (mobileMenu && (mobileMenu.contains(e.target) || (mobileMenuButton && mobileMenuButton.contains(e.target)))) return;
+            closeMobileMenu();
         });
 
         // Lightbox / simple gallery modal
