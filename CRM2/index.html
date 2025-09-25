@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zee Color Lab CRM</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#7f19e6",
+              "background-light": "#f7f6f8",
+              "background-dark": "#191121",
+            },
+            fontFamily: {
+              display: ["Manrope"],
+            },
+            borderRadius: { DEFAULT: "0.5rem", lg: "1rem", xl: "1.5rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex min-h-screen">
+<aside class="w-64 bg-background-light dark:bg-background-dark p-6 flex flex-col justify-between border-r border-primary/10">
+<div>
+<div class="mb-8">
+<h1 class="text-xl font-bold text-gray-800 dark:text-white">Zee Color Lab</h1>
+<p class="text-sm text-gray-500 dark:text-gray-400">Admin</p>
+</div>
+<nav class="flex flex-col space-y-2">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary text-white font-medium" href="index.html">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,115.55V208a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V168a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v40a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V115.55a16,16,0,0,1,5.17-11.78l80-75.48.11-.11a16,16,0,0,1,21.53,0,1.14,1.14,0,0,0,.11.11l80,75.48A16,16,0,0,1,224,115.55Z"></path>
+</svg>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-gray-800 dark:text-gray-300 font-medium" href="clients.html">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"></path>
+</svg>
+<span>Clients</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-gray-800 dark:text-gray-300 font-medium" href="bookings.html">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"></path>
+</svg>
+<span>Bookings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-gray-800 dark:text-gray-300 font-medium" href="projects.html">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M216,72H131.31L104,44.69A15.86,15.86,0,0,0,92.69,40H40A16,16,0,0,0,24,56V200.62A15.4,15.4,0,0,0,39.38,216H216.89A15.13,15.13,0,0,0,232,200.89V88A16,16,0,0,0,216,72ZM40,56H92.69l16,16H40ZM216,200H40V88H216Z"></path>
+</svg>
+<span>Projects</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-gray-800 dark:text-gray-300 font-medium" href="invoices.html">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M152,120H136V56h8a32,32,0,0,1,32,32,8,8,0,0,0,16,0,48.05,48.05,0,0,0-48-48h-8V24a8,8,0,0,0-16,0V40h-8a48,48,0,0,0,0,96h8v64H104a32,32,0,0,1-32-32,8,8,0,0,0-16,0,48.05,48.05,0,0,0,48,48h16v16a8,8,0,0,0,16,0V216h16a48,48,0,0,0,0-96Zm-40,0a32,32,0,0,1,0-64h8v64Zm40,80H136V136h16a32,32,0,0,1,0,64Z"></path>
+</svg>
+<span>Invoices</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 text-gray-800 dark:text-gray-300 font-medium" href="reports.html">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M216,40H136V24a8,8,0,0,0-16,0V40H40A16,16,0,0,0,24,56V176a16,16,0,0,0,16,16H79.36L57.75,219a8,8,0,0,0,12.5,10l29.59-37h56.32l29.59,37a8,8,0,1,0,12.5-10l-21.61-27H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,136H40V56H216V176ZM104,120v24a8,8,0,0,1-16,0V120a8,8,0,0,1,16,0Zm32-16v40a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm32-16v56a8,8,0,0,1-16,0V88a8,8,0,0,1,16,0Z"></path>
+</svg>
+<span>Reports</span>
+</a>
+</nav>
+</div>
+</aside>
+<main class="flex-1 p-8 overflow-y-auto">
+<h1 class="text-3xl font-bold text-gray-800 dark:text-white mb-8">Dashboard</h1>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+<div class="bg-white dark:bg-background-dark p-6 rounded-lg shadow-sm">
+<p class="text-base font-medium text-gray-500 dark:text-gray-400">Total Clients</p>
+<p class="text-3xl font-bold text-gray-800 dark:text-white">120</p>
+</div>
+<div class="bg-white dark:bg-background-dark p-6 rounded-lg shadow-sm">
+<p class="text-base font-medium text-gray-500 dark:text-gray-400">Upcoming Bookings</p>
+<p class="text-3xl font-bold text-gray-800 dark:text-white">15</p>
+</div>
+<div class="bg-white dark:bg-background-dark p-6 rounded-lg shadow-sm">
+<p class="text-base font-medium text-gray-500 dark:text-gray-400">Outstanding Invoices</p>
+<p class="text-3xl font-bold text-primary">$5,000</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-1 space-y-6">
+<h2 class="text-xl font-bold text-gray-800 dark:text-white">Recent Activities</h2>
+<div class="relative space-y-4">
+<div class="absolute left-3.5 top-3.5 h-full w-0.5 bg-primary/20"></div>
+<div class="flex items-start gap-4">
+<div class="z-10 flex h-8 w-8 items-center justify-center rounded-full bg-primary/20 text-primary">
+<svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M256,136a8,8,0,0,1-8,8H232v16a8,8,0,0,1-16,0V144H200a8,8,0,0,1,0-16h16V112a8,8,0,0,1,16,0v16h16A8,8,0,0,1,256,136Zm-57.87,58.85a8,8,0,0,1-12.26,10.3C165.75,181.19,138.09,168,108,168s-57.75,13.19-77.87,37.15a8,8,0,0,1-12.25-10.3c14.94-17.78,33.52-30.41,54.17-37.17a68,68,0,1,1,71.9,0C164.6,164.44,183.18,177.07,198.13,194.85ZM108,152a52,52,0,1,0-52-52A52.06,52.06,0,0,0,108,152Z"></path>
+</svg>
+</div>
+<div>
+<p class="font-medium text-gray-800 dark:text-white">New client added: Sarah Johnson</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">2 hours ago</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="z-10 flex h-8 w-8 items-center justify-center rounded-full bg-primary/20 text-primary">
+<svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"></path>
+</svg>
+</div>
+<div>
+<p class="font-medium text-gray-800 dark:text-white">Booking confirmed for 'Summer Wedding'</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Yesterday</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="z-10 flex h-8 w-8 items-center justify-center rounded-full bg-primary/20 text-primary">
+<svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M152,120H136V56h8a32,32,0,0,1,32,32,8,8,0,0,0,16,0,48.05,48.05,0,0,0-48-48h-8V24a8,8,0,0,0-16,0V40h-8a48,48,0,0,0,0,96h8v64H104a32,32,0,0,1-32-32,8,8,0,0,0-16,0,48.05,48.05,0,0,0,48,48h16v16a8,8,0,0,0,16,0V216h16a48,48,0,0,0,0-96Zm-40,0a32,32,0,0,1,0-64h8v64Zm40,80H136V136h16a32,32,0,0,1,0,64Z"></path>
+</svg>
+</div>
+<div>
+<p class="font-medium text-gray-800 dark:text-white">Invoice sent to Robert Davis</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">3 days ago</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-2">
+<h2 class="text-xl font-bold text-gray-800 dark:text-white mb-6">Upcoming Bookings</h2>
+<div class="overflow-x-auto bg-white dark:bg-background-dark rounded-lg shadow-sm">
+<table class="w-full text-sm text-left">
+<thead class="bg-gray-50 dark:bg-gray-900/20 text-gray-500 dark:text-gray-400 uppercase">
+<tr>
+<th class="px-6 py-3" scope="col">Client</th>
+<th class="px-6 py-3" scope="col">Project</th>
+<th class="px-6 py-3" scope="col">Date</th>
+<th class="px-6 py-3" scope="col">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-gray-200 dark:border-gray-700">
+<td class="px-6 py-4 font-medium text-gray-800 dark:text-white">Emily White</td>
+<td class="px-6 py-4 text-gray-600 dark:text-gray-300">Autumn Portraits</td>
+<td class="px-6 py-4 text-gray-600 dark:text-gray-300">2024-08-15</td>
+<td class="px-6 py-4"><span class="px-3 py-1 text-xs font-medium rounded-full bg-primary/20 text-primary">Confirmed</span></td>
+</tr>
+<tr class="border-b border-gray-200 dark:border-gray-700">
+<td class="px-6 py-4 font-medium text-gray-800 dark:text-white">Michael Green</td>
+<td class="px-6 py-4 text-gray-600 dark:text-gray-300">Corporate Headshots</td>
+<td class="px-6 py-4 text-gray-600 dark:text-gray-300">2024-08-20</td>
+<td class="px-6 py-4"><span class="px-3 py-1 text-xs font-medium rounded-full bg-yellow-500/20 text-yellow-600 dark:text-yellow-400">Pending</span></td>
+</tr>
+<tr class="border-b border-gray-200 dark:border-gray-700">
+<td class="px-6 py-4 font-medium text-gray-800 dark:text-white">Olivia Brown</td>
+<td class="px-6 py-4 text-gray-600 dark:text-gray-300">Family Photoshoot</td>
+<td class="px-6 py-4 text-gray-600 dark:text-gray-300">2024-08-25</td>
+<td class="px-6 py-4"><span class="px-3 py-1 text-xs font-medium rounded-full bg-primary/20 text-primary">Confirmed</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
